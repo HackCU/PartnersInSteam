@@ -3,6 +3,8 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.security import SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from app import app
 
+from auth import user_datastore, Security
+
 db = SQLAlchemy(app)
 
 roles_users = db.Table('roles_users',
@@ -24,3 +26,7 @@ class User(db.Model):
     roles = db.relationship('Role', secondary=roles_users,
                             backref=db.backref('users', lazy='dynamic'))
 
+def create_user(username, email, password):
+    user_datastore.create_user(username=username, email=email, password=password)
+    db.session.commit()
+    print("Session committed")
