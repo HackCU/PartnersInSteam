@@ -1,0 +1,31 @@
+<!doctype html>
+<title>{% block title %}Welcome{% endblock %} | Wayhaven</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<div class="page">
+  <h1><center><font size="8">Wayhaven</font></center></h1>
+  <div class="navigation">
+  {% if g.user %}
+    <a href="{{ url_for('about') }}">About</a> |
+    <a href="{{ url_for('new_chapter') }}">Create a Chapter</a> |
+    <a href="{{ url_for('view_story') }}">The Story So Far</a> |
+    <a href="{{ url_for('logout') }}">Log Out</a>
+  {% else %}
+    <a href="{{ url_for('about') }}">About</a> |
+    <a href="{{ url_for('new_chapter') }}">Create a Chapter</a> |
+    <a href="{{ url_for('view_story') }}">The Story So Far</a> |
+    <a href="{{ url_for('login') }}">Sign In</a> |
+    <a href="{{ url_for('register') }}">Register </a>
+  {% endif %}
+  </div>
+  
+  <div class="body">
+  {% block body %}{% endblock %}
+  </div>
+  <div class="footer">
+    <font size="1">
+        Having problems? <a href="https://github.com/HackCU/PartnersInSteam/issues" target="_blank">Submit an issue</a>
+        </br>
+        Wayhaven &mdash; A Flask Application
+    </font>
+  </div>
+</div>

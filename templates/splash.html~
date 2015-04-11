@@ -3,7 +3,7 @@
 {% block body %}
 
 <body>
-    <h2> <font size="6"> Welcome to Wayhaven, </font> </h2>
+    <h1> Welcome to Wayhaven, </h1>
     <font size="4"> an immersive storytelling environment, made to share media for 
     storytelling in a whole new way. Explore exsisting stories. Write your own. 
     Comment and react to the adventures happening in Wayhaven.</font>

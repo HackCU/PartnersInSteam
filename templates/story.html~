@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Story{% endblock %}
+{% block body %}
+
+    <h2> <font size="6"> Story-telling of the Future </font> </h2>
+    <p>
+        {{ story }}
+	this is the story
+    </p>
+
+{% endblock %}

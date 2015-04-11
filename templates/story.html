@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Wayhaven </title>
-</head>
+{% extends "layout.html" %}
+{% block title %}Story{% endblock %}
+{% block body %}
 
-<body>
-    <h1> Story-telling of the Future </h1>
+    <h2> <font size="6"> Aldmoor Archives </font> </h2>
     <p>
-        {{ story }}
+        <font size="4">The Aldmoor Archives are where you can find all of the stories of Wayhaven!<font>
+        {{ story }} 
     </p>
 
-</body>
-
-
-</html>
+{% endblock %}

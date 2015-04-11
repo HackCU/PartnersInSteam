@@ -6,7 +6,6 @@
     <form action="#submitted" method="POST">
         Story Arc: 
         </br>
-        <!-- I want this to be an autofilled dropdown based on the stories that user owns -->
         <textarea name="title" placeholder="Wayhaven" rows="1" cols="50"></textarea>
         </br>
         Main Character: 
