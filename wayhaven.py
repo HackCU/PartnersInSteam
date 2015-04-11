@@ -1,11 +1,16 @@
-from flask import Flask, render_template, request, url_for, redirect, session, abort, g, flash, _app_ctx_stack
+from flask import Flask, render_template, request, url_for, redirect, session, abort, flash, _app_ctx_stack
 import time
-from sqlite3 import dbapi2 as sqlite3
 from hashlib import md5
 from datetime import datetime
 from werkzeug import check_password_hash, generate_password_hash
+from sqlalchemy import Table, Column, Integer, String
+from sqlalchemy.orm import mapper
+from yourapplication.database import metadata, db_session
 
 app = Flask(__name__)
+''' DATABASE '''
+
+''' ROUTES '''
 
 @app.route('/')
 def splash():
