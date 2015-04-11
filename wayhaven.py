@@ -48,7 +48,7 @@ def new_chapter():
 
 @app.route('/aldmoorArchives')
 def view_archives():
-    return render_template('aldmoorArchives.html', story=story)
+    return render_template('aldmoorArchives.html')
 
 @app.route('/account', methods=['POST', 'GET'])
 def account_info():
