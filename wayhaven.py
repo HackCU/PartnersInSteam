@@ -53,13 +53,13 @@ def view_archives():
 @app.route('/account', methods=['POST', 'GET'])
 def account_info():
     if request.method == 'POST':
-	return redirect(url_for('edit_account_info'))
+        return redirect(url_for('edit_account_info'))
     return render_template('accountInfo.html')
 
 @app.route('/editAccount', methods=['POST', 'GET'])
 def edit_account_info():
     if request.method == 'POST':
-	return redirect(url_for('account_info'))
+        return redirect(url_for('account_info'))
     return render_template('editAccountInfo.html')
 
 if __name__ == '__main__':
