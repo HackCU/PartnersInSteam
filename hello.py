@@ -11,13 +11,12 @@ def splash():
 def about():
     return render_template('about.html')
 
-@app.route('/newChapter')
+@app.route('/newChapter', methods=['POST', 'GET'])
 def new_chapter():
+    global story
+    if request.method == 'POST':
+        story = request.form['contents']
     return render_template('newChapter.html')
-
-@app.route('/newChapter', methods=['POST'])
-def submit_story():
-    story = request.form['contents']
 
 @app.route('/story')
 def view_story():
