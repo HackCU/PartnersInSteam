@@ -2,7 +2,7 @@
 <title>{% block title %}Welcome{% endblock %} | Wayhaven</title>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <div class="page">
-  <h1><center><font size="8">Wayhaven</font></center></h1>
+  <h1><font size="8">Wayhaven</font></h1>
   <div class="navigation">
   {% if g.user %}
     <a href="{{ url_for('splash') }}">Home</a> |    
@@ -17,6 +17,7 @@
     <a href="{{ url_for('login') }}">Sign In</a> |
     <a href="{{ url_for('register') }}">Register </a> 
   {% endif %}
+
   </div>
   
   <div class="body">
