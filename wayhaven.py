@@ -33,17 +33,37 @@ def logout():
 def about():
     return render_template('about.html')
 
+@app.route('/newStory', methods=['POST', 'GET'])
+def new_story():
+    #global story
+    if request.method == 'POST':
+        #story = request.form['contents']
+        return redirect(url_for('view_archives'))
+    return render_template('newStory.html')
+
 @app.route('/newChapter', methods=['POST', 'GET'])
 def new_chapter():
-    global story
+    #global story
     if request.method == 'POST':
-        story = request.form['contents']
-        return redirect(url_for('view_story'))
+        #story = request.form['contents']
+        return redirect(url_for('view_archives'))
     return render_template('newChapter.html')
 
-@app.route('/story')
-def view_story():
-    return render_template('story.html', story=story)
+@app.route('/aldmoorArchives')
+def view_archives():
+    return render_template('aldmoorArchives.html', story=story)
+
+@app.route('/account', methods=['POST', 'GET'])
+def account_info():
+    if request.method == 'POST':
+	return redirect(url_for('edit_account_info'))
+    return render_template('accountInfo.html')
+
+@app.route('/editAccount', methods=['POST', 'GET'])
+def edit_account_info():
+    if request.method == 'POST':
+	return redirect(url_for('account_info'))
+    return render_template('editAccountInfo.html')
 
 if __name__ == '__main__':
     app.run(debug = True)
