@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Account Information{% endblock %}
+{% block body %}
+    <h2><font size="6"> Edit Your Account! </font></h2>
+        <form method="POST">
+            Username: </br>
+            Email: </br>
+            <input type="text" name="email" size="30"> </br>
+            About Me: </br>
+            <input type="text" name="AboutMe" size="30"></br>
+        
+        <input type="submit" value="Save">
+    </form>
+        
+{% endblock %}

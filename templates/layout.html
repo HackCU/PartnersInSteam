@@ -5,16 +5,22 @@
   <h1><center><font size="8">Wayhaven</font></center></h1>
   <div class="navigation">
   {% if g.user %}
+    <a href="{{ url_for('splash') }}">Home</a> |    
     <a href="{{ url_for('about') }}">About</a> |
-    <a href="{{ url_for('new_chapter') }}">Create a Chapter</a> |
-    <a href="{{ url_for('view_story') }}">The Story So Far</a> |
+    <a href="{{ url_for('new_story') }}">Create a New Story</a> |
+    <a href="{{ url_for('new_chapter') }}">Add a Chapter</a> |
+    <a href="{{ url_for('view_archives') }}">Aldmoor Archives</a> |
+    <a href="{{ url_for('account_info') }}"> Account </a> |
     <a href="{{ url_for('logout') }}">Log Out</a>
   {% else %}
+    <a href="{{ url_for('splash') }}">Home</a> |
     <a href="{{ url_for('about') }}">About</a> |
-    <a href="{{ url_for('new_chapter') }}">Create a Chapter</a> |
-    <a href="{{ url_for('view_story') }}">The Story So Far</a> |
+    <a href="{{ url_for('new_story') }}">Create a New Story</a> |
+    <a href="{{ url_for('new_chapter') }}">Add a Chapter</a> |
+    <a href="{{ url_for('view_archives') }}">Aldmoor Archives</a> |
     <a href="{{ url_for('login') }}">Sign In</a> |
-    <a href="{{ url_for('register') }}">Register </a>
+    <a href="{{ url_for('register') }}">Register </a> |
+    <a href="{{ url_for('account_info') }}"> Account </a> 
   {% endif %}
   </div>
   

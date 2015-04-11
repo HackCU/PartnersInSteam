@@ -1,6 +1,0 @@
-{% extends "layout.html" %}
-{% block title %}About{% endblock %}
-{% block body %}
-    <h2> About The Platform </h2>
-    <h2> About The Creators </h2> 
-{% endblock %}

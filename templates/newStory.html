@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}New Story{% endblock %}
+{% block body %}
+    <h2><font size="6"> Create a Story </font></h2>
+
+    <form method="POST">
+        Story Title: 
+        </br>
+        <!-- I want this to be an autofilled dropdown based on the stories that user owns -->
+        <textarea name="StoryTitle" placeholder="Wayhaven" rows="1" cols="50"></textarea>
+        </br>
+        Characters: (please enter names, seperated by a comma) 
+        </br>
+        <textarea name="StoryCharacters" placeholder="Vesr" rows="1" cols="50"></textarea>
+        </br>
+        Story Summary:
+        </br>
+        <textarea name="Summary" placeholder="On this particular adventure, we meet a dog named Bard." rows="20" cols="50"></textarea> 
+        </br> 
+        <input type="submit" name="submit" value="Submit">
+    </form>
+{% endblock %}
