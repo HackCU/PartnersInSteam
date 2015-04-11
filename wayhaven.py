@@ -1,15 +1,11 @@
-from flask import Flask, render_template, request, url_for, redirect, session, abort, g, flash
-'''import time
+from flask import Flask, render_template, request, url_for, redirect, session, abort, g, flash, _app_ctx_stack
+import time
 from sqlite3 import dbapi2 as sqlite3
 from hashlib import md5
 from datetime import datetime
-from flask import Flask, request, session, url_for, redirect, \
-     render_template, abort, g, flash, _app_ctx_stack
-from werkzeug import check_password_hash, generate_password_hash'''
+from werkzeug import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
-
-story = ""
 
 @app.route('/')
 def splash():
@@ -35,17 +31,13 @@ def about():
 
 @app.route('/newStory', methods=['POST', 'GET'])
 def new_story():
-    #global story
     if request.method == 'POST':
-        #story = request.form['contents']
         return redirect(url_for('view_archives'))
     return render_template('newStory.html')
 
 @app.route('/newChapter', methods=['POST', 'GET'])
 def new_chapter():
-    #global story
     if request.method == 'POST':
-        #story = request.form['contents']
         return redirect(url_for('view_archives'))
     return render_template('newChapter.html')
 
