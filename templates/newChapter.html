@@ -13,12 +13,21 @@
         </br>
         <textarea name="character" placeholder="Vesr" rows="1" cols="50"></textarea>
         </br>
+	Chapter Title:
+        </br>
+        <textarea name="Title" placeholder="A Chapter" rows="1" cols="50"></textarea> 
+	</br>
         Chapter Contents:
         </br>
         <textarea name="contents" placeholder="On this particular adventure, we meet a dog named Bard." rows="20" cols="50"></textarea> 
 	</br>
-        Would you like to upload a game or photo instead?
+        Upload a game or photo instead:
+        <input type="file" accept="file_extension|audio/*|video/*|image/*|media_type">
         </br> 
-        <input type="submit" name="submit" value="Submit">
+        {% if g.user %}
+       		<input type="submit" name="submit" value="Submit">
+        {% else %}
+        	Cannot submit form unless you log in
+	{% endif %}
     </form>
 {% endblock %}

@@ -1,18 +1,92 @@
-body            { font-family: sans-serif; background: #C2A385; }
-a, h1, h2, h3   { color: #4C331A; }
-h1, h2, h3      { font-family: 'Georgia', serif; margin: 0; }
-h1              { border-bottom: 2px solid #4C331A; }
-h2              { font-size: 1.2em; }
+body{ 
+	font-family: sans-serif; 
+	background: #C2A385; 
+}
 
-.page           { margin: 2em auto; width: 80%; border: 5px solid #4C331A;
-                  padding: 0.8em; background: #FFFFB2; }
-.entries        { list-style: none; margin: 0; padding: 0; }
-.entries li     { margin: 0.8em 1.2em; }
-.entries li h2  { margin-left: -1em; }
-.add-entry      { font-size: 0.9em; border-bottom: 1px solid #4C331A; }
-.add-entry dl   { font-weight: bold; }
-.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
-                  margin-bottom: 1em; background: #fafafa; }
-.flash          { background: #CEE5F5; padding: 0.5em;
-                  border: 1px solid #AACBE2; }
-.error          { background: #F0D6D6; padding: 0.5em; }
+a, h1, h2, h3{ 
+	color: #4C331A; 
+}
+
+h1, h2, h3{ 
+	font-family: 'Georgia', serif; 
+	margin: 0; 
+}
+
+h1{ 
+	border-bottom: 2px solid #4C331A; 
+	text-align: center;
+}
+
+h2{ 
+	font-size: 1.2em; 
+}
+
+.page{ 
+	margin: 2em auto; 
+	width: 80%; 
+	border: 5px solid #4C331A;
+        padding: 3em; 
+	background: #FFFFB2; 
+}
+
+.entries{ 
+	list-style: none; 
+	margin: 0; 
+	padding: 0; 
+}
+
+.entries li{ 
+	margin: 0.8em 1.2em; 
+}
+
+.entries li h2{ 
+	margin-left: -1em; 
+}
+
+.add-entry{ 
+	font-size: 0.9em; 
+	border-bottom: 1px solid #4C331A; 
+}
+
+.add-entry dl{ 
+	font-weight: bold; 
+}
+
+.metanav{ 
+	text-align: right; 
+	font-size: 0.8em; 
+	padding: 0.3em;
+        margin-bottom: 1em; 
+	background: #fafafa; 
+}
+
+.flash{ 
+	background: #CEE5F5; 
+	padding: 0.5em;
+        border: 1px solid #AACBE2; 
+}
+
+.error{ 
+	background: #F0D6D6; 
+	padding: 0.5em; 
+}
+
+.navigation{
+	background-color: #4C331A;
+	padding: 7px;
+	text-align: center;
+	color: white;
+}
+
+.navigation a{
+	text-decoration: none;
+	padding: 5px 15px;
+	font-weight: bold;
+	line-height: 1.1em;
+	color: white;
+}
+
+.navigation a:hover{
+	background-color: #C2A385;
+	text-decoration: italic;
+}
