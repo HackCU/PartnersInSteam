@@ -5,7 +5,7 @@ from datetime import datetime
 from werkzeug import check_password_hash, generate_password_hash
 
 from app import app
-from db import db
+from model import db
 
 #from sqlalchemy import Table, Column, Integer, String
 #from sqlalchemy.orm import mapper
