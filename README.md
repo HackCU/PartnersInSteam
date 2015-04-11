@@ -1,33 +1,28 @@
 #Wayhaven
+
 A web application for storytelling and community building
-=====
 
 How to Run
+
 python wayhaven.py
-=====
+
 
 HACKCU To Do:
 
-[x] Make pretty logo
+- [x] pick a platform - FLASK
 
-[x] make a website
+- [x] Start website
 
-[x] pick a platform - FLASK
+- [x] design ui
 
-[x] design ui
+- [ ] log in
 
-[x] make a slide deck
+- [ ] discussion board - (Aldmoor Archives)
 
-[x] elevator pitch
+- [ ] chapter posting system
 
-[] log in
+- [ ] user profile
 
-[] discussion board - (Aldmoor Archives)
-
-[] chapter posting system
-
-[] user profile
-
-[] other aesthetics!
+- [ ] other aesthetics!
 
 
