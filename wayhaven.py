@@ -74,4 +74,5 @@ def edit_account_info():
     return render_template('editAccountInfo.html')
 
 if __name__ == '__main__':
+    db.create_all()
     app.run(debug = True)
