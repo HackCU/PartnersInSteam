@@ -23,9 +23,17 @@ def splash():
 def login():
     return render_template('login.html')
 
-@app.route('/register')
+@app.route('/register', methods=['POST', 'GET'])
 def register():
-    return render_template('register.html')
+    if request.method == 'POST':
+        username = request.form['username']
+        user_email = request.form['email']
+        password1 = request.form['password']
+        password2 = request.form['password2']
+        auth.create_user(username, password1)
+        return render_template('register.html')
+    else:
+        return render_template('register.html')
 
 @app.route('/logout')
 def logout():
