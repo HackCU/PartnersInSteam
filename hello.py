@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
-story = None
+story = "hi placeholder"
 
 @app.route('/')
 def splash():
@@ -21,7 +21,7 @@ def submit_story():
 
 @app.route('/story')
 def view_story():
-    return render_template('story.html')
+    return render_template('story.html', story=story)
 
 
 if __name__ == '__main__':
