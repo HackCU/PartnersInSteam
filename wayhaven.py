@@ -30,7 +30,8 @@ def register():
         user_email = request.form['email']
         password1 = request.form['password']
         password2 = request.form['password2']
-        auth.create_user(username, password1)
+        if password1 != password2:
+            return render_template('register.html', message="Passwords do not match")
         return render_template('register.html')
     else:
         return render_template('register.html')
