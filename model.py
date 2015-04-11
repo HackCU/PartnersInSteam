@@ -1,9 +1,8 @@
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.security import SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
+from flask.ext.security import SQLAlchemyUserDatastore, UserMixin, RoleMixin, \
+    login_required, Security, SQLAlchemyUserDatastore
 from app import app
-
-from auth import user_datastore, Security
 
 db = SQLAlchemy(app)
 
@@ -30,3 +29,7 @@ def create_user(username, email, password):
     user_datastore.create_user(username=username, email=email, password=password)
     db.session.commit()
     print("Session committed")
+
+user_datastore = SQLAlchemyUserDatastore(db, User, Role)
+security = Security(app, user_datastore)
+
