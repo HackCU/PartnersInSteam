@@ -3,11 +3,14 @@ import time
 from hashlib import md5
 from datetime import datetime
 from werkzeug import check_password_hash, generate_password_hash
+
+from app import app
+import db
+
 #from sqlalchemy import Table, Column, Integer, String
 #from sqlalchemy.orm import mapper
 #from yourapplication.database import metadata, db_session
 
-app = Flask(__name__)
 ''' DATABASE '''
 
 ''' ROUTES '''
