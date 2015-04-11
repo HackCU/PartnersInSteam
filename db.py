@@ -1,6 +1,6 @@
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.security import SQLAlchemyUserDatastore UserMixin, RoleMixin, login_required
+from flask.ext.security import SQLAlchemyUserDatastore, UserMixin, RoleMixin, login_required
 from app import app
 
 db = SQLAlchemy(app)
